@@ -23,12 +23,14 @@ public class UserLoginTests extends TestBase{
 		Thread.sleep(2000); ////// not required, adding just to see tests are running in parallel
 
 	}
-	public void DesignerLoginTest() throws Throwable {
-		
-		loginPage.login("designer@localhost.com", "admin@123");
-		Thread.sleep(2000); ////// not required, adding just to see tests are running in parallel
-		assertEqualsString_custom("ExpectedTest", "ActualText", "LoginPageHomePage");
-
-	}
+	/*
+	 * public void DesignerLoginTest() throws Throwable {
+	 * 
+	 * loginPage.login("designer@localhost.com", "admin@123"); Thread.sleep(2000);
+	 * ////// not required, adding just to see tests are running in parallel
+	 * assertEqualsString_custom("ExpectedTest", "ActualText", "LoginPageHomePage");
+	 * 
+	 * }
+	 */
 
 }
