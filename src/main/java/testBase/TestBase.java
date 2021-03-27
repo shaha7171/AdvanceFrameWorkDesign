@@ -22,6 +22,7 @@ public class TestBase extends ActionEngine{
 		DriverFactory.getInstance().getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		DriverFactory.getInstance().getDriver().navigate().to(url);
 		WaitFactory.getInstance().setWait(explicitwait());
+		
 	}
 	
 
@@ -30,6 +31,8 @@ public class TestBase extends ActionEngine{
 
 	@AfterMethod
 	public void tearDown() {
+		
+		System.out.println("Close");
 		DriverFactory.getInstance().closeBrowser();
 	}
 }

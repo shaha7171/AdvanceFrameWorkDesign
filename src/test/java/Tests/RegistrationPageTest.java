@@ -22,7 +22,7 @@ public class RegistrationPageTest extends TestBase {
 	public void SubmitForm(Object obj1) throws Throwable {
 		@SuppressWarnings("unchecked")
 		HashMap<String, String> testData = (HashMap<String, String>) obj1;
-		ExtentFactory.getInstance().getExtent().info("Form registration initiated...");
+		extent().info("Form registration initiated...");
 		w2aHome.clickOnPractiseSiteOne();
 		w2aPrac1.RegistrationFormSignIn();
 	//	Thread.sleep(2000);

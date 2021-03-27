@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="LaunchApplication"/>
-          <include name="SubmitForm"/>
+          <include name="SubmitForm" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- Tests.RegistrationPageTest -->
     </classes>
