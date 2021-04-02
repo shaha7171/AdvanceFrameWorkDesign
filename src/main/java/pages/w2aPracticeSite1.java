@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import testBase.TestBase;
 
 public class w2aPracticeSite1 extends TestBase {
-
+	By EnterToTestingWebSite = By.xpath("//div[@id='load_box']//a[@class='fancybox'][normalize-space()='ENTER TO THE TESTING WEBSITE']");
 	By Link_Registration = By.xpath("//img[@src='images/registration.jpg']");
 	By Link_SignIn = By.xpath("//a[normalize-space()='Signin']");
 	By txt_UserName = By.xpath("//div[@id='login']//input[@name='username']");
@@ -98,13 +98,20 @@ public class w2aPracticeSite1 extends TestBase {
 	
 
 	public void RegistrationFormSignIn() {
+		
+
 		explicitWaitConditions(Link_SignIn, "ETBC");
-		click_custom(driver().findElement(Link_SignIn), "Registration Form Sign In");
-		explicitWaitConditions(txt_UserName, "POEL");
-		sendKeys_custom(driver().findElement(txt_UserName), "First Name", "a");
-		sendKeys_custom(driver().findElement(txt_Passwprd), "Password", "a");
-		click_custom(driver().findElement(btn_Submit), "Clicking on submit button");
-		extent().info("Sigining process is completed");
+		
+		click_custom(driver().findElement(EnterToTestingWebSite), "Click on the Testing WebSite Link");
+		extent().info("Entered to the Registration Website");
+		/*
+		 * click_custom(driver().findElement(Link_SignIn), "Registration Form Sign In");
+		 * explicitWaitConditions(txt_UserName, "POEL");
+		 * sendKeys_custom(driver().findElement(txt_UserName), "First Name", "a");
+		 * sendKeys_custom(driver().findElement(txt_Passwprd), "Password", "a");
+		 * click_custom(driver().findElement(btn_Submit), "Clicking on submit button");
+		 * extent().info("Sigining process is completed");
+		 */
 	}
 
 	public void clickFormRegistrationLink() throws InterruptedException {
